@@ -1,0 +1,118 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+html, body {
+	height:100%;
+	font-family: $font;
+}
+body {
+	background:$base-color url('../img/landing-bg.jpg') no-repeat center center;
+	@include stretch(cover);
+}
+.navbar-brand {
+	img {
+		
+	}
+}
+.navbar-default {
+	background-color:transparent;
+	border: 0;
+	padding:30px;
+	&.navbar {
+		margin:0;
+		@include rounded(0);
+	}
+	@include breakpoint(medium_screen1){
+		padding:0;
+	}
+}
+.navbar-collapse {
+	border:0;
+	padding:0;
+}
+.navbar-right {
+	margin:0;
+}
+.navbar-nav {
+	li {
+	   a {
+		color:#fff !important;
+		font-size: $base-fsz - 3.5em;
+		font-weight: $base-fw - 300;
+		@include breakpoint(medium_screen1){
+			background:$base-color;
+			padding:15px;
+			border-top:1px solid lighten($base-color,7%);
+			}
+			&:hover, &:focus {
+				background:lighten($base-color,5%) !important;
+			}
+		}
+	}
+}
+//mob-button
+.navbar-toggle {
+	@include rounded(0);
+	border:0;
+	margin:25px;
+	&:hover, &:focus {
+		background:transparent !important;
+	}
+}
+.icon-bar {
+	width:30px !important;
+	background:#fff !important;
+}
+.no-padd{
+	padding:0;
+}
+
+.btn-center {
+	margin:0 auto;
+	display:block;
+	overflow:hidden;
+}
+.button-style {
+	@include transition(all, .7s);
+	&:hover{
+		background-color:darken($button-base, 15%);
+		color: #fff;
+	}
+	@extend %buttons;
+	&:last-child {
+		background-color:darken($button-base, 15%);
+		&:hover{
+		background-color:lighten($button-base, 0%);
+		color: #fff;
+		}
+	}
+}
+#cover {
+	height:100% !important;
+	text-align:center;
+	display:flex;
+	align-items:center;
+}
+#cover-caption {
+	width:100%;
+}
+
+h1 {
+	font-size:$base-fsz;
+	color:#fff;
+	font-weight: $base-fw;
+	padding:0 0 40px 0;
+	margin:0;
+	font-family: $font2;
+	font-style:italic;
+	span{
+		font-weight: $base-fw - 300;
+		display: inline-block;
+		padding:25px 0;
+	}
+	@include breakpoint(medium_screen1){
+		font-size: $base-fsz - 2.5em;
+		padding:0;
+		margin-top: -100px;
+	}
+}

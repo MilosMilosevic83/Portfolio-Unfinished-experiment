@@ -1,0 +1,124 @@
+@import 'mixins.scss';
+@import 'variables.scss';
+%label {
+  font-family: $font;
+    color:#484647;
+    font-size: 1em;
+    float: left;
+}
+%textarea {
+  border-radius:0;
+    color:#484647;
+}
+%input {
+  border-radius:0;
+  color: #484647;
+  background:#fff; 
+}
+.message-wrap {
+  margin:20px auto;
+  max-width: 420px;
+  width: 100%;
+  float: none;
+  overflow: hidden;
+    @include breakpoint(medium_screen1) {
+      float: none;
+      margin:0 auto;
+  }
+}
+.form-group-wrap {
+  padding:0;
+
+  .btn{
+    border-radius:0;
+    width: 100%;
+    height: 50px;
+    border:1px solid $base-color;
+    background:$base-color;
+    margin-left:auto !important;
+    margin-top: 20px !important;
+    margin-right: auto !important;
+    font-family: $font;
+    font-size: 1.5em;
+     color: #fff;
+      &:hover, &:focus {
+        background:#fff !important;
+        border:1px solid $base-color;
+        color: $base-color;
+       }
+    }
+
+}
+
+.form-group {
+  color:#939393;
+  padding:0 !important;
+  float: left;
+  @include breakpoint(medium_screen1) {
+    width: 100%;
+    padding-right:0 !important;
+  }
+  label {
+    @extend %label;
+    margin:5px 0;
+  }
+  input {
+    @extend %input;
+    width: 100% !important;
+  }
+  textarea {
+    @extend %textarea;
+  }
+}
+.form-group-text {
+  color:#484647;
+  padding-right:0 !important;
+  width: 100% !important;
+  display: block !important;
+  clear: both !important;
+ label {
+    @extend %label;
+    margin:10px 0;
+  }
+  input {
+   @extend %input;
+   border:0 !important;
+  }
+  textarea {
+    @extend %textarea;
+    background:#fff;
+  }
+}
+
+.form-control {
+  padding:6px 12px !important; 
+  width: 100% !important;
+  height: 40px;
+     background:transparent;
+     color:#484647;
+     border:1px solid rgb(226,226,226) !important;
+     
+     &:focus {
+      border:1px solid rgb(135,137,136) !important;
+      
+    }
+}
+.modal-dialog {
+  background:#fff;
+  padding:20px 0;
+}
+.modal-header {
+  border:0;
+  padding:0;
+  position: relative;
+}
+.close {
+  position:absolute;
+  margin:20px;
+  clear:both;
+  right: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  float: none;
+}

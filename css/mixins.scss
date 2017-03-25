@@ -1,0 +1,106 @@
+%about-me {
+	display: block;
+	margin:40px auto 0 auto;
+}
+
+@mixin stretch($bg-size){
+   -webkit-background-size: $bg-size;
+  -moz-background-size: $bg-size;
+  -o-background-size: $bg-size;
+  background-size: $bg-size;
+}
+@mixin rounded ($radius){
+      -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
+@mixin box-shadow($shadow){
+   -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+@mixin breakpoint($point) {
+			@if $point == biggest_screen {
+				@media (max-width: 1280px) { @content; }
+			}
+			@if $point == biggest_screen2{
+				@media (max-width: 1200px) { @content; }
+			}
+			@if $point == big_screen1 {
+				@media (max-width: 1020px) { @content; }
+			}
+			@else if $point == big_screen2 {
+				@media (max-width: 970px) { @content; }
+			}
+			@else if $point == big_screen3 {
+				@media (max-width: 900px) { @content; }
+			}
+			@else if $point == big_screen4 {
+				@media (max-width: 850px) { @content; }
+			}
+			@else if $point == medium_screen1 {
+				@media (max-width: 768px) { @content; }
+			}
+			@else if $point == medium_screen2 {
+				@media (max-width: 700px) { @content; }
+			}
+			@else if $point == medium_screen_extra {
+				@media (max-width: 650px) { @content; }
+			}
+			@else if $point == medium_screen3 {
+				@media (max-width: 480px) { @content; }
+			}
+			@else if $point == small_screen1 {
+				@media (max-width: 400px) { @content; }
+			}
+			@else if $point == small_screen_extra {
+				@media (max-width: 350px) { @content; }
+			}
+			@else if $point == small_screen2 {
+				@media (max-width: 320px) { @content; }
+			}
+		}
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+// generic transform
+@mixin transform($transforms) {
+     -moz-transform: $transforms;
+       -o-transform: $transforms;
+      -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+// scale
+
+@mixin scale($scale) {
+   @include transform(scale($scale));
+} 
+
+@mixin translate ($x, $y, $z) {
+   @include transform(translate($x, $y, $z));
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+
+      -webkit-box-shadow:$top $left $blur $color #{$inset};
+      -moz-box-shadow:$top $left $blur $color #{$inset};
+      box-shadow:$top $left $blur $color #{$inset};
+    }
+%buttons {
+	font-size:1.3em;
+	font-weight: 100;
+	padding:10px 50px;
+	background-color:$button-base;
+	color:#fff;
+	border:0;
+	@include breakpoint(medium_screen1){
+		margin:5px auto;
+	}
+}

@@ -1,0 +1,33 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.work-wrap {
+
+	img {
+		@extend %about-me;
+	}
+	div {
+		padding:0;
+		background:lighten($base-color, 5%);
+	}
+}
+.preview {
+	display:inline-block;
+	position: relative;
+	width: 100%;
+	padding:10px;
+}
+.hovered{
+	@include transition(all, .7s);
+	a {
+		margin:0;
+	}
+	img {
+		width:100%;
+		padding:10px;
+		margin:0 !important;
+	}
+	&:hover {
+		opacity:.6;	
+	}	
+}

@@ -1,0 +1,18 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.about-wrap {
+	background:rgb(233,233,233);
+	img {
+		@extend %about-me;
+	}
+	.txt {
+		font-size: $base-fsz - 3.5em;
+		padding-top: 60px;
+		padding-right: 120px;
+		@include breakpoint(medium_screen1){
+			padding: 0;
+			text-align: justify;
+		}
+	}
+}

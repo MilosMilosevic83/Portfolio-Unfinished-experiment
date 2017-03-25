@@ -1,0 +1,41 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+.footer-wrap {
+	background: rgb(233,233,233);
+	h2 {
+		text-align: center;
+		color:$base-color;
+		padding: 30px 0;
+	}
+	.button-style {
+		@extend %buttons;
+		display: block;
+		margin:30px auto !important;
+	}
+}
+.center-bg {
+  max-width: 350px;
+  margin:0 auto;
+    padding:40px 0;
+}
+.all-services {
+  font-weight: 300;
+  font-family: $font;
+}
+img.footer-logo {
+  max-width: 304px;
+  width:100%;
+}
+.social {
+  display: table;
+  width:300px;
+  text-align:center;
+  margin:20px auto;
+  a {
+    display: table-cell;
+  }
+  img {
+    max-width:40px;
+  }
+}

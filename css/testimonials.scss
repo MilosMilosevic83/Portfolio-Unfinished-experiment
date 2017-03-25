@@ -1,0 +1,59 @@
+
+@import 'variables.scss';
+@import 'mixins.scss';
+.testimonials-wrap {
+	img {
+		@extend %about-me;
+	}
+}
+
+.active{ 
+	background: transparent; 
+
+} 
+.content{
+ 	margin-top:20px; 
+ } 
+ .adjust1{ float:left; width:100%; margin-bottom:0; } 
+ .adjust2{ 
+ 	margin:0; 
+ 	text-align:center;
+ 	color: #fff;
+ 	font-family: Georgia;
+ 	font-style:italic;
+ 	padding: 30px;
+ } 
+ .thumbnail {
+ 	background:transparent;
+ 	border:0;
+ }
+ .carousel-indicators {
+ 	bottom: 0;
+ 	display: block;
+ 	height: 40px;
+ 	 li {
+ 	  border:0; 
+ 	  background:#fff;
+ 	  width: 15px;
+ 	  height: 15px;
+ 	} 
+ 	.active {
+ 		width: 15px;
+ 	  	height: 15px;
+ 	  	background-color:darken($base-color, 15%);
+ 	}
+ }
+
+ .carousel-control{ 
+ 	color:#31708f; 
+ 	width:5%; 
+ 	margin-top: 30px;
+ 	clear: both;
+ } 
+ .carousel-control:hover, 
+ .carousel-control:focus{ color:#31708f; } 
+ .carousel-control.left, 
+ .carousel-control.right { background-image: none; } 
+ .media-object{ margin:auto; margin-top:15%; } 
+ @media screen and (max-width: 768px) { .media-object{ margin-top:0; } 
+}
